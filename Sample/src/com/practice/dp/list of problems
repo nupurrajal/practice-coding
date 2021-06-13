@@ -1,0 +1,12 @@
+0-1 Knapsack: target sum, subset sum, equal sum partition, count of subset sum, minimum subset sum difference, number of subset with given subset
+
+Unbounded Knapsack: Rod cutting, coin change, max ribbon cut
+
+Fibonacci
+LCS
+LIS (longest increasing subsequence)
+Kadane's Algorithm
+Matrix Chain multiplication
+DP on tree
+DP on grid
+Others

@@ -1,0 +1,8 @@
+
+a) Streams -> stream()
+b) Interface with method implementation:
+    Default -> define a method as default to define method.
+    Overriding object class methods in interfaces is not permitted.
+    Supports static methods.
+c) Lambda Functions
+d) Functional Programming
