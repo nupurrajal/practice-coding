@@ -2,6 +2,24 @@
 
 Unbounded Knapsack: Rod cutting, coin change, max ribbon cut
 
+Longest common subsequence:
+    Longest common substring
+    Print LCS
+    Shortest common super-sequence
+    Print SCS
+    Minimum number of deletions to change a to b
+    Largest repeating subsequence
+    Length of largest subsequence of a which is a substring of b
+    Subsequence pattern matching
+    Count how many time a appears as subsequence in b
+    Largest palindromic substring
+    Largest palindromic subsequence
+    Count of palindromic substring
+    Minimum number of deletion in string to make it palindromic
+    Minimum number of insertion in string to make it palindromic
+
+
+
 Fibonacci
 LCS
 LIS (longest increasing subsequence)

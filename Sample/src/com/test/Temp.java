@@ -14,10 +14,18 @@ public class Temp {
 //            System.out.println(e.getMessage());
 //        }
         Scanner s = new Scanner(System.in);
-        while (s.hasNext()) {
-            int i = s.nextInt();
-            System.out.println(i);
-        }
+//        while (s.hasNext()) {
+//            int i = s.nextInt();
+//            System.out.println(i);
+//        }
+        String s1="a";
+        String s2=s1;
+        s1="b";
+        System.out.println(s2==s1);
+        System.out.println(-17%10);
+        System.out.println(Integer.MAX_VALUE+1);
+        Integer i = 0;
+        System.out.println(i);
 
     }
 }
