@@ -18,7 +18,13 @@ Longest common subsequence:
     Minimum number of deletion in string to make it palindromic
     Minimum number of insertion in string to make it palindromic
 
-
+Matrix chain multiplication:
+    Print MCM
+    Evaluate expression to true / boolean parenthesis
+    Min / max value of an expression
+    Palindromic partitioning
+    Scramble string
+    Egg dropping problem
 
 Fibonacci
 LCS

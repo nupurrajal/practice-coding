@@ -43,7 +43,7 @@ public class LongestCommonSubsequence {
         return dp[len1][len2] = Math.max(findLongestCommonSubsequenceMemoization(s1, s2, len1-1, len2, dp), findLongestCommonSubsequenceMemoization(s1, s2, len1, len2-1, dp));
     }
 
-    private static int findLongestCommonSubsequenceBottomUp(String s1, String s2, int len1, int len2) {
+    public static int findLongestCommonSubsequenceBottomUp(String s1, String s2, int len1, int len2) {
         int[][] dp = new int[len1+1][len2+1];
         for (int i = 1; i <= len1; i++) {
             for (int j = 1; j <= len2; j++) {

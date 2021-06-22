@@ -11,8 +11,7 @@ public class ShortestCommonSuperSequence {
         sc.close();
     }
 
-    private static String shortestSuperSubsequence(String s1, String s2, int length, int length1) {
-
-        return null;
+    private static int shortestSuperSubsequence(String s1, String s2, int len1, int len2) {
+        return len1 + len2 - LongestCommonSubsequence.findLongestCommonSubsequenceBottomUp(s1, s2, len1, len2);
     }
 }
