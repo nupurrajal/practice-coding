@@ -8,8 +8,8 @@ public class LongestCommonSubstring {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s1 = sc.next();
-        String s2 = sc.next();
-        System.out.println(findLongestCommonSubstringRecursive(s1, s2, s1.length(), s2.length(), 0));
+//        String s2 = sc.next();
+//        System.out.println(findLongestCommonSubstringRecursive(s1, s2, s1.length(), s2.length(), 0));
 
 //        int[][] dp = new int[s1.length()+1][s2.length()+1];
 //        for (int[] arr : dp) {
@@ -19,6 +19,7 @@ public class LongestCommonSubstring {
 
 //        System.out.println(findLongestCommonSubstringBottomUp(s1, s2, s1.length(), s2.length()));
 
+        System.out.println(findLongestCommonSubstringBottomUp(s1, new StringBuilder(s1).reverse().toString(), s1.length(), s1.length()));
         sc.close();
     }
 
@@ -29,7 +30,7 @@ public class LongestCommonSubstring {
         if (s1.charAt(len1-1) == s2.charAt(len2-1)) {
             return findLongestCommonSubstringRecursive(s1, s2, len1-1, len2-1, count+1);
         }
-        return Math.max(findLongestCommonSubstringRecursive(s1, s2, len1-1, len2, 0), findLongestCommonSubstringRecursive(s1, s2, len1, len2-1, count));
+        return Math.max(findLongestCommonSubstringRecursive(s1, s2, len1-1, len2, 0), findLongestCommonSubstringRecursive(s1, s2, len1, len2-1, 0));
     }
 
     private static int findLongestCommonSubstringMemoization(String s1, String s2, int len1, int len2, int[][] dp) {

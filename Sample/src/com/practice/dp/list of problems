@@ -31,6 +31,13 @@ LCS
 LIS (longest increasing subsequence)
 Kadane's Algorithm
 Matrix Chain multiplication
+
 DP on tree
+    Diameter of binary tree
+    Max path sum between any two nodes
+    Max path sum from leaf to leaf
+    Diameter of n-ary tree
+
+
 DP on grid
 Others
