@@ -1,7 +1,10 @@
 package com.practice.graphs;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
+// idea - kahn's algo, if topological sort is not generated, then it contains cycle
 public class CycleDetectionDirectedBFS {
     public static void main(String[] args) {
 
@@ -15,37 +18,45 @@ public class CycleDetectionDirectedBFS {
         directedGraph.addEdge(7,2);
         directedGraph.addEdge(7,8);
         directedGraph.addEdge(8,9);
-        directedGraph.addEdge(9,7);
+//        directedGraph.addEdge(9,7);
+
+//        DirectedGraph directedGraph = new DirectedGraph(4);
+//        directedGraph.addEdge(1,2);
+//        directedGraph.addEdge(2,3);
+//        directedGraph.addEdge(3,4);
+//        directedGraph.addEdge(4,2);
 
         System.out.println(containsCycleInDirectedGraph(directedGraph.v, directedGraph.adjacencyList));
     }
 
     private static boolean containsCycleInDirectedGraph(int v, ArrayList<ArrayList<Integer>> adjacencyList) {
-        boolean[] visited = new boolean[v+1];
-        boolean[] dfsVisited = new boolean[v+1];
+        int[] inDegree = new int[v + 1];
+
         for (int i = 1; i <= v; i++) {
-            if (!visited[i]) {
-                if (cycleCheck(i, adjacencyList, visited, dfsVisited)) {
-                    return true;
+            for (int node : adjacencyList.get(i)) {
+                inDegree[node]++;
+            }
+        }
+
+        Queue<Integer> queue = new LinkedList<>();
+        for (int i = 1; i <= v; i++) {
+            if (inDegree[i] == 0) {
+                queue.add(i);
+            }
+        }
+        int count = 0;
+        while (!queue.isEmpty()) {
+            int curr = queue.poll();
+            count++;
+            for (int node : adjacencyList.get(curr)) {
+                inDegree[node]--;
+                if (inDegree[node] == 0) {
+                    queue.add(node);
                 }
             }
         }
-        return false;
+        return count != v;
     }
 
-    private static boolean cycleCheck(int i, ArrayList<ArrayList<Integer>> adjacencyList, boolean[] visited, boolean[] dfsVisited) {
-        visited[i] = true;
-        dfsVisited[i] = true;
-        for (int node : adjacencyList.get(i)) {
-            if (!visited[node]) {
-                if(cycleCheck(node, adjacencyList, visited, dfsVisited)) {
-                    return true;
-                }
-            } else if (dfsVisited[node]) {
-                return true;
-            }
-        }
-        dfsVisited[i] = false;
-        return false;
-    }
+
 }

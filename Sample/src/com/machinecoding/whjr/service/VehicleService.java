@@ -1,10 +1,10 @@
-package com.machinecoding.service;
+package com.machinecoding.whjr.service;
 
-import com.machinecoding.entity.Reservation;
-import com.machinecoding.entity.User;
-import com.machinecoding.entity.Vehicle;
-import com.machinecoding.repository.VehicleAccessRepository;
-import com.machinecoding.types.VehicleType;
+import com.machinecoding.whjr.entity.Reservation;
+import com.machinecoding.whjr.entity.User;
+import com.machinecoding.whjr.entity.Vehicle;
+import com.machinecoding.whjr.repository.VehicleAccessRepository;
+import com.machinecoding.whjr.types.VehicleType;
 
 import java.time.temporal.TemporalUnit;
 import java.util.ArrayList;

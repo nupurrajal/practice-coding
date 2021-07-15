@@ -1,6 +1,6 @@
-package com.machinecoding.entity;
+package com.machinecoding.whjr.entity;
 
-import com.machinecoding.types.VehicleType;
+import com.machinecoding.whjr.types.VehicleType;
 
 import java.util.Date;
 

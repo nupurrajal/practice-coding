@@ -1,59 +1,28 @@
 package com.test;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.Serializable;
 import java.util.Scanner;
 
 public class Temp {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-//        try {
-//            Float f = new Float(3.0);
-//            int x = f.intValue();
-//            byte b = f.byteValue();
-//            double d = f.doubleValue();
-//            System.out.println(x + b + d);
-//        } catch (Exception e) {
-//            System.out.println(e.getMessage());
-//        }
-        Scanner s = new Scanner(System.in);
-//        while (s.hasNext()) {
-//            int i = s.nextInt();
-//            System.out.println(i);
-//        }
-        String s1="a";
-        change(s1);
-        System.out.println(s1);
-//        String s2=s1;
-//        s1="b";
-//        System.out.println(s2==s1);
-//        System.out.println(-17%10);
-//        System.out.println(Integer.MAX_VALUE+1);
-//        Integer l = 0;
-//        System.out.println(l);
-
-//        int res = 4;
-//        for (int i = 5; i <=8; i++) {
-//            res = res ^ i;
-//        }
-//        System.out.println("res = " + res);
-//        System.out.println(-3%4);
-//
-//
-//        Test input = new Test();
-//
-//        // serialization
-//        FileOutputStream fos = new FileOutputStream("../abc.txt");
-//        ObjectOutputStream oos = new ObjectOutputStream(fos);
-//        oos.writeObject(input);
-//
-//        // de-serialization
-//        FileInputStream fis = new FileInputStream("../abc.txt");
-//        ObjectInputStream ois = new ObjectInputStream(fis);
-//        Test output = (Test)ois.readObject();
-//        System.out.println("i = " + output.i);
-//        System.out.println("j = " + output.j);
-//        System.out.println("k = " + output.k);
-//        System.out.println("l = " + output.l);
-//        System.out.println("m = " + output.m);
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+            String str = sc.next();
+            int i = 0, k = 0;
+            StringBuilder res = new StringBuilder();
+            while (k < str.length()) {
+                if (str.charAt(k) >= 65 && str.charAt(k) <= 90) {
+                    res.append(str.substring(i, k).toUpperCase());
+                    res.append("_");
+                    i = k;
+                }
+                k++;
+            }
+            res.append(str.substring(i).toUpperCase());
+            System.out.println(res);
+        }
+        sc.close();
     }
 
     public static void main(char args) {

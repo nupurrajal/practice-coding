@@ -1,4 +1,4 @@
-package com.machinecoding.entity;
+package com.machinecoding.whjr.entity;
 
 public class User {
     private String emailId;
