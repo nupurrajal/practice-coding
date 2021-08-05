@@ -1,4 +1,4 @@
-package com.machinecoding.whjr.entity;
+package com.machinecoding.sample.entity;
 
 public class Vehicle {
 

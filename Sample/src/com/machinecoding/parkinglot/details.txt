@@ -1,1 +1,17 @@
 multiple floors, entry and exits
+
+types of lots -
+handicapped
+car
+large
+bike
+electric
+e-bike
+
+FCFS based
+time issued at entry and exit timestamps - calculate rate
+
+admin -> add, modify parking lots, floor, entrance & exit plans
+
+inventory get updated once user gets or cancels / expires ticket and thus spot
+

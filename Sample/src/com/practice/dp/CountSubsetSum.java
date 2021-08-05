@@ -29,7 +29,7 @@ public class CountSubsetSum {
         return countSubsetSumRecursion(array, sum, n-1) + countSubsetSumRecursion(array, sum - array[n-1], n-1);
     }
 
-    private static int countSubsetSumDP(int[] array, int sum, int n) {
+    public static int countSubsetSumDP(int[] array, int sum, int n) {
         int[][] dp = new int[n+1][sum+1];
         for (int j = 0; j <= sum; j++) {
             dp[0][j] = 0;

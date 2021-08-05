@@ -1,6 +1,6 @@
-package com.machinecoding.whjr.types;
+package com.machinecoding.sample.types;
 
-import com.machinecoding.whjr.utils.Constants;
+import com.machinecoding.sample.utils.Constants;
 
 public enum VehicleType {
 

@@ -1,8 +1,8 @@
-package com.machinecoding.whjr.repository;
+package com.machinecoding.sample.repository;
 
-import com.machinecoding.whjr.entity.Reservation;
-import com.machinecoding.whjr.entity.Vehicle;
-import com.machinecoding.whjr.types.VehicleType;
+import com.machinecoding.sample.entity.Reservation;
+import com.machinecoding.sample.entity.Vehicle;
+import com.machinecoding.sample.types.VehicleType;
 
 import java.util.Date;
 import java.util.List;

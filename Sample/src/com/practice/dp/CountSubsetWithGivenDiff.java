@@ -23,8 +23,7 @@ public class CountSubsetWithGivenDiff {
     }
 
     private static int countSubsetWithGivenDiffDP(int[] array, int sum, int n) {
-
-        return 0;
+        return CountSubsetSum.countSubsetSumDP(array, sum, n);
     }
 }
 

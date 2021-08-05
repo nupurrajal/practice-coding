@@ -2,26 +2,24 @@ package com.test;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Temp {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         Scanner sc = new Scanner(System.in);
-        while (sc.hasNext()) {
-            String str = sc.next();
-            int i = 0, k = 0;
-            StringBuilder res = new StringBuilder();
-            while (k < str.length()) {
-                if (str.charAt(k) >= 65 && str.charAt(k) <= 90) {
-                    res.append(str.substring(i, k).toUpperCase());
-                    res.append("_");
-                    i = k;
-                }
-                k++;
-            }
-            res.append(str.substring(i).toUpperCase());
-            System.out.println(res);
-        }
+        System.out.println(2<<2);
+        Random random = new Random();
+        System.out.println(random.nextDouble());
+        double a = 295.04;
+
+        int  b = 300;
+
+        byte c = (byte) a;
+
+        byte d = (byte) b;
+
+        System.out.println(c + " "  + d);
         sc.close();
     }
 

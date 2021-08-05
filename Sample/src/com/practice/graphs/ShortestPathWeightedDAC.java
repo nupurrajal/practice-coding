@@ -1,9 +1,6 @@
 package com.practice.graphs;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class ShortestPathWeightedDAC {
     public static void main(String[] args) {
@@ -38,6 +35,7 @@ public class ShortestPathWeightedDAC {
                 }
             }
         }
+        BitSet bitSet = new BitSet();
         return distance;
     }
 }

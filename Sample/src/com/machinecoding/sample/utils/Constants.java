@@ -1,4 +1,4 @@
-package com.machinecoding.whjr.utils;
+package com.machinecoding.sample.utils;
 
 public class Constants {
     public static final double CAR_PER_HOUR = 10.0;
