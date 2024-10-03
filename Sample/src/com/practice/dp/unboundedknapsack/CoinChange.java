@@ -21,9 +21,23 @@ public class CoinChange {
             Arrays.fill(arr, -1);
         }
 //        System.out.println(countWaysToChange(n - 1, total, coins));
-        System.out.println(countWaysToChangeDP(n - 1, total, coins, dp));
+        System.out.println(countWaysToChangeRecursion(n, total, coins));
 
         sc.close();
+    }
+
+    static int countWaysToChangeRecursion(int n, int total, int[] coins) {
+        if (total == 0) {
+            return 1;
+        }
+        if (n == 0) {
+            return 0;
+        }
+        if (coins[n-1] > total) {
+            return countWaysToChangeRecursion(n-1, total, coins);
+        }
+        return countWaysToChangeRecursion(n-1, total, coins) + countWaysToChangeRecursion(n, total - coins[n-1], coins);
+
     }
 
     static int countWaysToChange(int n, int total, int[] coins) {
@@ -53,3 +67,10 @@ public class CoinChange {
 //        return countWaysToChange(n, total - coins[n], coins) + countWaysToChange(n - 1, total, coins);
     }
 }
+
+/*
+
+3 5
+1 2 3
+
+ */

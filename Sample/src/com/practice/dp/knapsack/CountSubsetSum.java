@@ -12,7 +12,7 @@ public class CountSubsetSum {
         for (int i = 0; i < n; i++) {
             array[i] = sc.nextInt();
         }
-        System.out.println(countSubsetSumDP(array, sum, n));
+        System.out.println(countSubsetSumRecursion(array, sum, n));
         Boolean[][] dp = new Boolean[n + 1][sum + 1];
     }
 
@@ -26,7 +26,7 @@ public class CountSubsetSum {
         if (array[n-1] > sum) {
             return countSubsetSumRecursion(array, sum, n-1);
         }
-        return countSubsetSumRecursion(array, sum, n-1) + countSubsetSumRecursion(array, sum - array[n-1], n-1);
+        return countSubsetSumRecursion(array, sum-array[n-1], n-1) + countSubsetSumRecursion(array, sum, n-1);
     }
 
     public static int countSubsetSumDP(int[] array, int sum, int n) {

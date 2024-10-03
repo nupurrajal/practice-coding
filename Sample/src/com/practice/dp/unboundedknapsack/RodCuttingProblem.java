@@ -11,16 +11,26 @@ public class RodCuttingProblem {
         for (int i  = 0; i < N; i++) {
             price[i] = sc.nextInt();
         }
-        System.out.println(maximumProfitByCuttingRod(N, price));
-        sc.close();
-    }
-
-    private static int maximumProfitByCuttingRod(int N, int[] price) {
-        // dp dimension would be n+1 and length+1 as length might be restricted too
         int[] length = new int[N];
         for (int i = 0; i < N; i++) {
             length[i] = i+1;
         }
+        System.out.println(maxProfitRodRecursion(N, N, price, length));
+        sc.close();
+    }
+
+    private static int maxProfitRodRecursion(int N, int W, int[] value, int[] weight) {
+        if (N == 0 || W == 0) {
+            return 0;
+        }
+        if (weight[N-1] > W) {
+            return maxProfitRodRecursion(N-1, W, value, weight);
+        }
+        return Math.max(maxProfitRodRecursion(N-1, W, value, weight), value[N-1] + maxProfitRodRecursion(N, W-weight[N-1], value, weight));
+    }
+
+    private static int maximumProfitByCuttingRod(int N, int[] price, int[] length) {
+        // dp dimension would be n+1 and length+1 as length might be restricted too
         int[][] dp = new int[N+1][length.length+1];
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= length.length; j++) {

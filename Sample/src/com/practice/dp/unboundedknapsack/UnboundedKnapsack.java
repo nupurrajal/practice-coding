@@ -16,8 +16,18 @@ public class UnboundedKnapsack {
         for (int i = 0; i < n; i++) {
             weight[i] = sc.nextInt();
         }
-        System.out.println(unboundedKnapsackBottomUp(value, n, W, weight));
+        System.out.println(unboundedKnapsackRecursion(value, n, W, weight));
         sc.close();
+    }
+
+    private static int unboundedKnapsackRecursion(int[] value, int n, int W, int[] weight) {
+        if (n == 0 || W == 0) {
+            return 0;
+        }
+        if (weight[n-1] > W) {
+            return unboundedKnapsackRecursion(value, n-1, W, weight);
+        }
+        return Math.max(unboundedKnapsackRecursion(value, n-1, W, weight), value[n-1] + unboundedKnapsackRecursion(value, n, W - weight[n-1], weight));
     }
 
     private static int unboundedKnapsackBottomUp (int[] value, int n, int W, int[] weight) {
@@ -45,3 +55,14 @@ public class UnboundedKnapsack {
         return dp[n][W];
     }
 }
+
+/*
+2 100
+1 30
+1 50
+
+
+4 8
+10 40 50 70
+1 3 4 5
+ */

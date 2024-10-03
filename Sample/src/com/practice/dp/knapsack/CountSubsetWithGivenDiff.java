@@ -12,6 +12,12 @@ public class CountSubsetWithGivenDiff {
         for (int i = 0; i < n; i++) {
             array[i] = sc.nextInt();
         }
+        /*
+            s1 + s2 = range
+            s2 - s1 = given
+            ----------
+            s2 = (range + given) / 2
+         */
         int value = (Arrays.stream(array).sum() + diff);
         if (value % 2 == 0) {
             value /= 2;
