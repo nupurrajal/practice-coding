@@ -1,5 +1,8 @@
 package com.practice.dp;
 
+import com.practice.dp.longestcommonsubseq.PrintLCS;
+
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MinimumInsertionDeletionAToB {
@@ -8,7 +11,7 @@ public class MinimumInsertionDeletionAToB {
         Scanner sc = new Scanner(System.in);
         String s1 = sc.next();
         String s2 = sc.next();
-        System.out.println(minimumDeletionS1ToS2(s1, s2, s1.length(), s2.length()));
+        System.out.println(Arrays.toString(minimumDeletionS1ToS2(s1, s2, s1.length(), s2.length())));
         sc.close();
     }
 
@@ -22,3 +25,8 @@ public class MinimumInsertionDeletionAToB {
         return result;
     }
 }
+
+/*
+heap
+pea
+ */
